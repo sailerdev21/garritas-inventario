@@ -1,0 +1,76 @@
+<div class="container mt-4">
+  <h2>Inventario de Productos</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Categoría</th>
+        <th>Cantidad</th>
+        <th>Fecha de Vencimiento</th>
+        <th>Precio</th>
+        <th>Acciones</th> <!-- Nueva columna para acciones -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td>{{ product.id }}</td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.category }}</td>
+        <td>{{ product.quantity }}</td>
+        <td>{{ product.expirationDate | date }}</td>
+        <td>{{ product.price | currency:'USD' }}</td>
+        <td>
+          <button class="btn btn-warning btn-sm" (click)="editProduct(product)">
+            <i class="fas fa-edit"></i> Modificar
+          </button>
+          <button class="btn btn-danger btn-sm" (click)="deleteProduct(product.id)">
+            <i class="fas fa-trash"></i> Eliminar
+          </button>
+          <button class="btn btn-primary btn-sm" (click)="decreaseQuantity(product)">
+            <i class="fas fa-minus"></i> Restar
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Formulario para modificar el producto -->
+  <div *ngIf="productToEdit" class="mt-4">
+    <h3>Modificar Producto</h3>
+    <form (ngSubmit)="updateProduct()">
+      <div class="form-group">
+        <label for="name">Nombre del Producto</label>
+        <input type="text" class="form-control" id="name" [(ngModel)]="productToEdit.name" name="name">
+      </div>
+
+      <div class="form-group">
+        <label for="category">Categoría</label>
+        <input type="text" class="form-control" id="category" [(ngModel)]="productToEdit.category" name="category">
+      </div>
+
+      <div class="form-group">
+        <label for="quantity">Cantidad</label>
+        <input type="number" class="form-control" id="quantity" [(ngModel)]="productToEdit.quantity" name="quantity">
+      </div>
+
+      <div class="form-group">
+        <label for="expirationDate">Fecha de Vencimiento</label>
+        <input type="date" class="form-control" id="expirationDate" [(ngModel)]="productToEdit.expirationDate" name="expirationDate">
+      </div>
+
+      <div class="form-group">
+        <label for="price">Precio</label>
+        <input type="number" class="form-control" id="price" [(ngModel)]="productToEdit.price" name="price">
+      </div>
+
+      <button type="submit" class="btn btn-success mt-3">Guardar Cambios</button>
+    </form>
+  </div>
+</div>
+<div>
+  <!-- Enlace a YouTube -->
+  <a href="https://www.youtube.com" target="_blank" class="btn btn-info mt-4">
+    Ir a YouTube
+  </a>
+</div>

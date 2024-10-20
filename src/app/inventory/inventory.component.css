@@ -1,0 +1,142 @@
+/* Estilos generales del formulario */
+form {
+    margin-top: 20px;
+    background-color: #f7f9fc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    background-image: url('https://example.com/dog-paw-pattern.png'); /* Un fondo con huellitas */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  h3 {
+    text-align: center;
+    color: #3b5998;
+    font-weight: bold;
+  }
+  
+  /* Estilo de los inputs */
+  .form-group label {
+    font-weight: bold;
+    color: #3a6f8f;
+  }
+  
+  .form-control {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    background-color: #ffffff;
+  }
+  
+  .form-control:focus {
+    border-color: #7db9e8;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+  }
+  
+  /* Botón de envío */
+  button[type="submit"] {
+    background-color: #5bc0de;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #31b0d5;
+  }
+  
+  /* Botones de acción */
+  .btn-warning {
+    background-color: #ffc107;
+  }
+  
+  .btn-danger {
+    background-color: #d9534f;
+  }
+  
+  .btn-primary {
+    background-color: #0275d8;
+  }
+  
+  /* Estilos específicos para huellas */
+  form::after {
+    content: '';
+    background-image: url('https://example.com/dog-paw.svg'); /* Imagen de huellitas */
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    opacity: 0.2;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 100px;
+    height: 100px;
+    z-index: 0;
+  }
+  
+  /* Sección Modificar Producto */
+form {
+    background-color: #2a2a2a; /* Fondo oscuro */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  h3 {
+    color: #ff6347; /* Título en rojo vibrante */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+  }
+  
+  label {
+    color: #ffdf00; /* Etiquetas en amarillo neón */
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  input[type="date"] {
+    background-color: #333;
+    color: #fff;
+    border: 2px solid #ffdf00;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 5px;
+  }
+  
+  input[type="text"]:focus,
+  input[type="number"]:focus,
+  input[type="date"]:focus {
+    border-color: #ff6347; /* Enfoque rojo vibrante */
+    outline: none;
+  }
+  
+  button[type="submit"] {
+    background-color: #ff6347; /* Botón en rojo intenso */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #e5533d; /* Efecto hover */
+  }
+  
+  button[type="submit"]:active {
+    background-color: #c1442f; /* Efecto al hacer click */
+  }
+  

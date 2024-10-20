@@ -1,0 +1,32 @@
+<div class="container mt-4">
+  <h3>Registrar Producto</h3>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Nombre del Producto</label>
+      <input type="text" class="form-control" id="name" [(ngModel)]="newProduct.name" name="name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="category">Categoría</label>
+      <input type="text" class="form-control" id="category" [(ngModel)]="newProduct.category" name="category" required>
+    </div>
+
+    <div class="form-group">
+      <label for="quantity">Cantidad</label>
+      <input type="number" class="form-control" id="quantity" [(ngModel)]="newProduct.quantity" name="quantity" required>
+    </div>
+
+    <div class="form-group">
+      <label for="expirationDate">Fecha de Vencimiento</label>
+      <input type="date" class="form-control" id="expirationDate" [(ngModel)]="newProduct.expirationDate" name="expirationDate" required>
+    </div>
+
+    <div class="form-group">
+      <label for="price">Precio</label>
+      <input type="number" class="form-control" id="price" [(ngModel)]="newProduct.price" name="price" required>
+    </div>
+
+    <button type="submit" class="btn btn-success mt-3">Registrar Producto</button>
+  </form>
+</div>
+

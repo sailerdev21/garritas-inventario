@@ -1,0 +1,38 @@
+/* Estilo del formulario de registro */
+form {
+    margin-top: 20px;
+    background-color: #f7ffe6; /* Color suave de fondo */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    color: #4a9e4a; /* Color verde para el título */
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    border: 1px solid #a3d6a3; /* Borde suave verde */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    background-color: #4a9e4a; /* Color verde para botón */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; /* Aumentar tamaño del texto */
+}
+
+button[type="submit"]:hover {
+    background-color: #3b7a3b; /* Color más oscuro al pasar el ratón */
+}
